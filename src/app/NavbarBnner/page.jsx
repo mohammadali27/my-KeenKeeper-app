@@ -1,7 +1,12 @@
 import React from "react";
 import { IoMdAdd } from "react-icons/io";
 
-const NavbarBanner = () => {
+
+
+const NavbarBanner = ({Friends= []}) => {
+  const totalFriend =Friends.length;
+  const onTrack=Friends.filter(sta=> sta.status === "active").length;
+  const NeedAttention=Friends.filter(Need=> Need.status === "Need_Attention").length;
   return (
     <div>
       <h1 className="font-bold text-3xl text-center mt-5 mb-5">
@@ -12,27 +17,27 @@ const NavbarBanner = () => {
         the <br /> relationships that matter most.
       </p>
       <div className=" ">
-        <button className=" flex mx-auto items-center justify-center bg-green-600 text-white p-2 btn mt-5">
+        <button className=" flex mx-auto items-center justify-center bg-[#244d3f] text-white p-2 btn mt-5">
           <IoMdAdd />
           Add a Friend
         </button>
       </div>
       <div className=" flex justify-around gap-3 mt-10 ">
         <div className=" outline outline-fuchsia-100 px-10 py-5">
-          <h3 className=" text-center">10</h3>
+          <h3 className=" text-center">{totalFriend}</h3>
           <p>Total Friends</p>
         </div>
         <div className="outline outline-fuchsia-100 px-10 py-5">
-          <h3 className=" text-center">10</h3>
-          <p>Total Friends</p>
+          <h3 className=" text-center">{onTrack}</h3>
+          <p>On Track</p>
         </div>
         <div className="outline outline-fuchsia-100 px-10 py-5">
-          <h3 className=" text-center">10</h3>
-          <p>Total Friends</p>
+          <h3 className=" text-center">{NeedAttention}</h3>
+          <p>Need Attention</p>
         </div>
         <div className="outline outline-fuchsia-100 px-10 py-5 ">
-          <h3 className=" text-center">10</h3>
-          <p>Total Friends</p>
+          <h3 className=" text-center">12</h3>
+          <p>Interactions This Month</p>
         </div>
       </div>
     </div>

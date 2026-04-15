@@ -1,8 +1,9 @@
-import Image from "next/image";
-import NavbarBanner from "./NavbarBnner/page";
+import AllFriends from "./AllFriens/page";
 
 export default function Home() {
-  return <div className="">
-    <NavbarBanner></NavbarBanner>
-  </div>;
+  return (
+    <div className="">
+      <AllFriends></AllFriends>
+    </div>
+  );
 }

@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { MdOutlineHome, MdTimeline } from "react-icons/md";
-import { RiTimeLine } from "react-icons/ri";
+import Navlink from "@/component/Navlink/page";
 
 const Navbar = () => {
   return (
@@ -9,24 +7,7 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">KeenKeeper</a>
       </div>
       <div className="flex-none">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <Link href="/">
-              <MdOutlineHome size={20} />
-            Home
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <RiTimeLine size={20} />Timeline
-            </Link>
-          </li>
-          <li>
-            <Link href="/">
-              <MdTimeline size={20} />Stats
-            </Link>
-          </li>
-        </ul>
+        <Navlink />
       </div>
     </div>
   );
