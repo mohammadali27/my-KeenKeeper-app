@@ -18,19 +18,46 @@ const newPage = async ({ params }) => {
   console.log("ditiles page", app);
 
   return (
-    <div className="container mx-auto">
-      <p className="font-bold text-2xl mt-5 mb-5">Your Friends</p>
-
-      <div className="gap-3">
-        <div key={app.id} className="">
-          <div className="card shadow-sm">
-            <div className="card-body items-center text-center">
-              <Image src={app.picture} alt="" width={200} height={200} />
-
-              <h2 className="card-title">{app.name}</h2>
-              
-              <p> ago</p>
-            </div>
+    <div className="container mx-auto mb-5 mt-5">
+      <div className="gap-3 ">
+        <div key={app.id} className=" grid grid-cols-4 grid-rows-4 whitespace-nowrap justify-around gap-5  text-center">
+          <div className=" shadow-sm  ">
+            <Image
+              className="  mx-auto"
+              src={app.picture}
+              alt=""
+              width={200}
+              height={200}
+            />
+            <p>{app.name}</p>
+            <p>{app.status}</p>
+            <p>{app.tags}</p>
+            <p>{app.bio}</p>
+            <p>{app.email}</p>
+          </div>
+          <div className="shadow-sm items-center justify-center">
+            <p>{app.days_since_contact}</p>
+            <p>days_since_contact</p>
+          </div>
+          <div className="shadow-sm">
+            <p>{app.goal}</p>
+            <p>Goal (Days)</p>
+          </div>
+          <div className="shadow-sm">
+            <p>{app.next_due_date}</p>
+            <p>Next Due</p>
+          </div>
+          <div className="shadow-sm">
+            <p>{app.next_due_date}</p>
+            <p>Next Due</p>
+          </div>
+          <div className="shadow-sm">
+            <p>{app.next_due_date}</p>
+            <p>Next Due</p>
+          </div>
+          <div className="shadow-sm col-span-1">
+            <p>{app.next_due_date}</p>
+            <p>Next Due</p>
           </div>
         </div>
       </div>
