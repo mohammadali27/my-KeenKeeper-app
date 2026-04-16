@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import Image from "next/image";
 import NavbarBanner from "../NavbarBnner/page";
 // import friends from "@/component/data/friend.json";
@@ -12,7 +11,7 @@ const AllFriendsData = async function () {
 
 const AllFriends = async () => {
   // const app = friends;
-  const app =await AllFriendsData();
+  const app = await AllFriendsData();
   const Getstutas = (status) => {
     switch (status) {
       case "active":
@@ -34,7 +33,7 @@ const AllFriends = async () => {
       <>
         <div className=" grid grid-cols-4 mx-auto gap-3 ">
           {app.map((friend) => (
-            <Link key={friend.id} href="/friendsDitisesPage">
+            <Link key={friend.id} href={`/apps/${friend.id}`}>
               <div className="">
                 <div className="card shadow-sm">
                   <div className="card-body items-center text-center">
