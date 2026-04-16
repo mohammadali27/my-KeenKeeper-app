@@ -37,8 +37,8 @@
   },
   {
     "id": 4,
-    "name": "Donal Tramp",
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfye5gGndEEOPloudF20gtuNR-CuCx5pQm9Q&s",
+    "name": "Guido van Rossum",
+    "picture": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Guido_van_Rossum_in_PyConUS24.jpg/250px-Guido_van_Rossum_in_PyConUS24.jpg",
     "email": "emily@example.com",
     "days_since_contact": 2,
     "status": "active",
@@ -49,8 +49,8 @@
   },
   {
     "id": 5,
-    "name": "David Brown",
-    "picture": "/image/MohammadAli.JPG",
+    "name": "Mark Zuckerberg",
+    "picture": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSLKNvTAObNmgsz4RyEo73I-Rd2t5oYg5sPe-ZMIhgUZARn9lhbjCFzwWk9kVbgErJ86X5Y40dp6AYAUUDacaZQqZ-wIZcRda41xHEPoANurDKSdZISXEDcj08KWjev6wW4Xzkk4FnY&s=19",
     "email": "david@example.com",
     "days_since_contact": 30,
     "status": "Need_Attention",
