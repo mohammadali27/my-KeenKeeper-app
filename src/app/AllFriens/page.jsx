@@ -1,17 +1,17 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import NavbarBanner from "../NavbarBnner/page";
-import friends from "@/component/data/friend.json"
+// import friends from "@/component/data/friend.json"
 
-// const AllFriendsData = async function () {
-//   const res = await fetch("/friend.json");
-//   const data = await res.json();
-//   return data;
-// };
+const AllFriendsData = async function () {
+  const res = await fetch("https://my-keen-keeper-app.vercel.app/friend.json");
+  const data = await res.json();
+  return data;
+};
 
 const AllFriends = async () => {
-  const app = friends;
-
+  // const app = friends;
+  const app =await AllFriendsData();
   const Getstutas = (status) => {
     switch (status) {
       case "active":

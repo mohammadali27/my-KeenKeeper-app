@@ -3,10 +3,10 @@ import { IoMdAdd } from "react-icons/io";
 
 
 
-const NavbarBanner = ({Friends= []}) => {
-  const totalFriend =Friends.length;
-  const onTrack=Friends.filter(sta=> sta.status === "active").length;
-  const NeedAttention=Friends.filter(Need=> Need.status === "Need_Attention").length;
+const NavbarBanner = ({app= []}) => {
+  const totalFriend =app.length;
+  const onTrack=app.filter(sta=> sta.status === "active").length;
+  const NeedAttention=app.filter(Need=> Need.status === "Need_Attention").length;
   return (
     <div>
       <h1 className="font-bold text-3xl text-center mt-5 mb-5">

@@ -5,7 +5,7 @@ import React from "react";
 import { MdOutlineHome, MdTimeline } from "react-icons/md";
 import { RiTimeLine } from "react-icons/ri";
 
-const Navlink = () => {
+const Navlink = ({}) => {
   const Pathname = usePathname();
   return (
     <div>
@@ -25,9 +25,9 @@ const Navlink = () => {
         </li>
         <li>
           <Link
-            href="/Timeline"
+            href="/timeline"
             className={
-              Pathname === "/Timeline"
+              Pathname === "/timeline"
                 ? "btn bg-[#1A77F2] text-white border-[#005fd8]"
                 : "btn bg-white text-black border-[#e5e5e5]"
             }
@@ -38,9 +38,9 @@ const Navlink = () => {
         </li>
         <li>
           <Link
-            href="/Stats"
+            href="/stats"
             className={
-              Pathname === "/Stats"
+              Pathname === "/stats"
                 ? "btn bg-[#1A77F2] text-white border-[#005fd8]"
                 : "btn bg-white text-black border-[#e5e5e5]"
             }
