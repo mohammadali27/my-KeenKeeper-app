@@ -37,9 +37,8 @@
   },
   {
     "id": 4,
-    "name": "Donal Tramp",
-    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfye5gGndEEOPloudF20gtuNR-CuCx5pQm9Q&s",
-    "email": "emily@example.com",
+    "name": "Mark Zuckerberg",
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBzoEhINKmubui6TxLwoWvda42F71eKVICXw&s",
     "days_since_contact": 2,
     "status": "active",
     "tags": ["family"],

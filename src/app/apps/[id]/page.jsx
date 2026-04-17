@@ -1,8 +1,12 @@
+import InstalCallButton from "@/component/CallButton/InstalCallButton";
 import Image from "next/image";
+import { FaBoxArchive } from "react-icons/fa6";
+
+import { MdDelete } from "react-icons/md";
+import { RiNotificationSnoozeFill } from "react-icons/ri";
 
 const AllFriendsData = async function () {
   const res = await fetch("https://my-keen-keeper-app.vercel.app/friend.json", {
-    cache: "no-store",
   });
   const data = await res.json();
   return data;
@@ -12,18 +16,18 @@ const newPage = async ({ params }) => {
   const apps = await AllFriendsData();
   const { id } = await params;
 
-  console.log(apps);
+  // console.log(apps);
   //   const app = friends;
   const app = apps.find((app) => String(app.id) === id);
-  console.log("ditiles page", app);
+  // console.log("ditiles page", app);
 
   return (
-    <div className="container mx-auto mb-5 mt-5">
-      <div className="gap-3 ">
-        <div key={app.id} className=" grid grid-cols-4 grid-rows-4 whitespace-nowrap justify-around gap-5  text-center">
-          <div className=" shadow-sm  ">
+    <div className=" container mx-auto items-center mt-5 mb-5  ">
+      <div key={app.id} className="grid grid-cols-4 text-center">
+        <div className="items-center shadow-sm space-y-5">
+          <div className="grid justify-center   mx-auto ">
             <Image
-              className="  mx-auto"
+              className="mx-auto"
               src={app.picture}
               alt=""
               width={200}
@@ -35,31 +39,36 @@ const newPage = async ({ params }) => {
             <p>{app.bio}</p>
             <p>{app.email}</p>
           </div>
-          <div className="shadow-sm items-center justify-center">
+          <div className=" grid grid-rows-3">
+            <button className="btn">
+              <RiNotificationSnoozeFill />
+              Snooze 2 weeks
+            </button>
+            <button className="btn ">
+              <FaBoxArchive />
+              Archive
+            </button>
+            <button className="btn ">
+              <MdDelete />
+              Delete
+            </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-3">
+          <div className="">
             <p>{app.days_since_contact}</p>
             <p>days_since_contact</p>
           </div>
-          <div className="shadow-sm">
+          <div className="">
             <p>{app.goal}</p>
             <p>Goal (Days)</p>
           </div>
-          <div className="shadow-sm">
-            <p>{app.next_due_date}</p>
-            <p>Next Due</p>
-          </div>
-          <div className="shadow-sm">
-            <p>{app.next_due_date}</p>
-            <p>Next Due</p>
-          </div>
-          <div className="shadow-sm">
-            <p>{app.next_due_date}</p>
-            <p>Next Due</p>
-          </div>
-          <div className="shadow-sm col-span-1">
+          <div className="">
             <p>{app.next_due_date}</p>
             <p>Next Due</p>
           </div>
         </div>
+        <InstalCallButton app={app} />
       </div>
     </div>
   );
