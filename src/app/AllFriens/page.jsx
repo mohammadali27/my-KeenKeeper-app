@@ -6,6 +6,7 @@ import Link from "next/link";
 const AllFriendsData = async function () {
   const res = await fetch("https://my-keen-keeper-app.vercel.app/friend.json");
   const data = await res.json();
+  
   return data;
 };
 
