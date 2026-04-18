@@ -1,17 +1,16 @@
 import Image from "next/image";
 import NavbarBanner from "../NavbarBnner/page";
-// import friends from "@/component/data/friend.json";
+
 import Link from "next/link";
 
 const AllFriendsData = async function () {
   const res = await fetch("https://my-keen-keeper-app.vercel.app/friend.json");
   const data = await res.json();
-  
+
   return data;
 };
 
 const AllFriends = async () => {
-  // const app = friends;
   const app = await AllFriendsData();
   const Getstutas = (status) => {
     switch (status) {
@@ -32,7 +31,7 @@ const AllFriends = async () => {
       <p className=" font-bold text-2xl mt-5 mb-5 ">Your Friends</p>
 
       <>
-        <div className=" grid grid-cols-4 mx-auto gap-3 ">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto gap-3 ">
           {app.map((friend) => (
             <Link key={friend.id} href={`/apps/${friend.id}`}>
               <div className="">

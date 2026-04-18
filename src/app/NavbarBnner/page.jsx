@@ -22,7 +22,7 @@ const NavbarBanner = ({app= []}) => {
           Add a Friend
         </button>
       </div>
-      <div className=" flex justify-around gap-3 mt-10 ">
+      <div className=" grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 justify-around gap-3 mt-10 ">
         <div className=" outline outline-fuchsia-100 px-10 py-5">
           <h3 className=" text-center">{totalFriend}</h3>
           <p>Total Friends</p>
